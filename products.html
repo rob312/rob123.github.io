@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <title>Website</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+   google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Temperatuur', 'Zaden'],
+            ['Tijmzaden', 18],
+            ['Kamille zaden', 15],
+            ['Bieslook zaden', 17],
+            ['Basilicum zaden', 16],
+            ['Dille zaden', 20],
+          ]);
+
+          var options = {
+            chart: {
+              title: 'Temperatuur per zaad,',
+              subtitle: 'In graden celsius',
+            }
+          };
+
+          var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+
+
+      </script>
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Grondvochtigheid', 'Zaden'],
+          ['Tijmzaden', 220],
+          ['Kamille zaden', 250],
+          ['Bieslook zaden', 220],
+          ['Basilicum zaden', 210],
+          ['Dille zaden', 223],
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Grondvochtigheid',
+            subtitle: 'in milliliter',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+      </script>
+
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Beste zaden', 'van 1/10'],
+          ['Dille zaden', 9],
+          ['Kamille zaden',4],
+          ['Bieslook zaden',  5],
+          ['Basilicum zaden', 7],
+          ['Tijmzaden',    8]
+        ]);
+
+        var options = {
+          title: 'Top 5 beste zaden'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+     </script>
+</head>
+
+<body>
+
+    <nav class="nav1">
+        <h6 class="text-center">Zadenkopen.nl</h6>
+        <img class="rounded-corner text-center" src="" alt="" />
+    </nav>
+
+    <nav class="nav justify-content-center">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="products.html">Statistieken</a>
+        <a class="nav-link" href="about.html">Over ons</a>
+        <a class="nav-link" href="help.html">Help</a>
+    </nav>
+
+    <div class="space"></div>
+    <div class="container">
+        <h3 class="text-center">Zaden</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card mb-3 shadow-sm">
+                      <div id="columnchart_material" style="width: 540px; height: 500px;"></div>
+
+                    <div class="card-body">
+                        <p class="card-text text-center">Zaden
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card mb-3 shadow-sm">
+                       <div id="barchart_material" style="width: 520px; height: 500px;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-center">Zaden
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col-sm-12">
+                <div class="card mb-3 shadow-sm">
+                   <div id="piechart" style="width: 1200px; height: 500px;"></div>
+                    <div class="card-body">
+                        <p class="card-text text-center">Van 1/10.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> Zadenkopen.nl</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

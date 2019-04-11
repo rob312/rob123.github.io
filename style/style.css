@@ -1,0 +1,72 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  .nav1 {
+    background-color: #39dd5c!important;
+    height: 44px;
+    width: 100%;
+}
+nav.nav1 h6 {
+  color: white;
+  font-size: 17px;
+  line-height: 40px;
+}
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+nav {
+  height: 82px;
+  line-height: 63px;
+  color: black;
+  border-bottom: 1px solid lightgrey;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+.thumbnail {
+    position: relative;
+}
+.caption {
+    color: white;
+    position: absolute;
+    top: 42%;
+    right: 0;
+    width: 100%;
+}
+.box {
+  position: relative;
+}
+.img-title {
+position: absolute;
+ color: #fff;
+ text-align: center;
+ left: 0;
+ right: 0;
+ top: 40%;
+ font-size: 30px;
+}
+.margin-bottom {
+  margin-bottom: 100px;
+}
+.space {
+  margin-top: 100px;
+}
+.space1 {
+  margin-top: 20px;
+}
+.buttoncolor button.btn-primary {
+  width: 285px;
+}
+.space2 {
+  margin-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .thumbnail {
+    width: 600px;
+    height: 300px;;
+  }
+}
